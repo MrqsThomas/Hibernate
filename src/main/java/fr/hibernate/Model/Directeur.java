@@ -7,7 +7,7 @@ import javax.persistence.*;
  * @created 11/06/2021
  */
 @Entity
-@Table(name = "Directeur")
+@Table(name = "directeur")
 public class Directeur {
 
     @Id
@@ -15,10 +15,10 @@ public class Directeur {
     @Column(name = "id", nullable = false, unique = true)
     private int id;
 
-    @Column(name = "nom", nullable = false, length = 50)
+    @Column(name = "nom", length = 50)
     private String nom;
 
-    @Column(name = "prenom", nullable = false, length = 50)
+    @Column(name = "prenom", length = 50)
     private String prenom;
 
     public Directeur(String nom, String prenom) {

@@ -7,7 +7,7 @@ import javax.persistence.*;
  * @created 11/06/2021
  */
 @Entity
-@Table(name = "Chambre")
+@Table(name = "chambre")
 public class Chambre {
 
     @Id
@@ -15,16 +15,16 @@ public class Chambre {
     @Column(name = "id", nullable = false, unique = true)
     private int id;
 
-    @Column(name = "num_chambre", nullable = false)
+    @Column(name = "num_chambre")
     private int num_chambre;
 
-    @Column(name = "superficie", nullable = false)
+    @Column(name = "superficie")
     private Double superficie;
 
-    @Column(name = "type", nullable = false)
+    @Column(name = "type")
     private String type;
 
-    @Column(name = "etage", nullable = false)
+    @Column(name = "etage")
     private int etage;
 
     public Chambre(int num_chambre, Double superficie, String type, int etage) {
