@@ -1,14 +1,30 @@
 package fr.hibernate.Model;
 
+import javax.persistence.*;
+
 /**
  * @author Marques
  * @created 11/06/2021
  */
+@Entity
+@Table(name = "Chambre")
 public class Chambre {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, unique = true)
     private int id;
+
+    @Column(name = "num_chambre", nullable = false)
     private int num_chambre;
+
+    @Column(name = "superficie", nullable = false)
     private Double superficie;
+
+    @Column(name = "type", nullable = false)
     private String type;
+
+    @Column(name = "etage", nullable = false)
     private int etage;
 
     public Chambre(int num_chambre, Double superficie, String type, int etage) {
@@ -16,6 +32,10 @@ public class Chambre {
         this.superficie = superficie;
         this.type = type;
         this.etage = etage;
+    }
+
+    public Chambre() {
+
     }
 
     public int getId() {

@@ -8,5 +8,9 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate?serverTimezone=UTC</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <mapping class="fr.hibernate.Model.Salarie" />
+        <mapping class="fr.hibernate.Model.Directeur" />
+        <mapping class="fr.hibernate.Model.Hotel" />
+        <mapping class="fr.hibernate.Model.Chambre" />
     </session-factory>
 </hibernate-configuration>
