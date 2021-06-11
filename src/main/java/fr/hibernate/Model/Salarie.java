@@ -27,6 +27,9 @@ public class Salarie {
     @Column(name = "experience")
     private Double experience;
 
+    @ManyToOne
+    private Directeur directeur;
+
     public Salarie(String nom, String prenom, Double salaire, Double experience) {
         this.nom = nom;
         this.prenom = prenom;

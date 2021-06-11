@@ -1,6 +1,7 @@
 package fr.hibernate.Model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * @author Marques
@@ -20,6 +21,14 @@ public class Directeur {
 
     @Column(name = "prenom", length = 50)
     private String prenom;
+
+    @OneToOne
+    @JoinColumn(name="hotel_id")
+    private Hotel hotel;
+
+    @OneToMany(cascade=CascadeType.ALL)
+    @JoinColumn(name="directeur_id")
+    private Set<Salarie> salaries;
 
     public Directeur(String nom, String prenom) {
         this.nom = nom;

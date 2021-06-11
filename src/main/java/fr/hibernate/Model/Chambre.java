@@ -27,6 +27,9 @@ public class Chambre {
     @Column(name = "etage")
     private int etage;
 
+    @ManyToOne
+    private Hotel hotel;
+
     public Chambre(int num_chambre, Double superficie, String type, int etage) {
         this.num_chambre = num_chambre;
         this.superficie = superficie;

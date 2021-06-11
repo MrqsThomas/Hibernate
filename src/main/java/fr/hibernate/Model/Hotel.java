@@ -1,6 +1,7 @@
 package fr.hibernate.Model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * @author Marques
@@ -23,6 +24,13 @@ public class Hotel {
 
     @Column(name = "telephone", length = 50)
     private String telephone;
+
+    @OneToOne(mappedBy = "hotel")
+    private Directeur directeur;
+
+    @OneToMany(cascade=CascadeType.ALL)
+    @JoinColumn(name="hotel_id")
+    private Set<Chambre> chambres;
 
     public Hotel(String nom, String adresse, String telephone) {
         this.nom = nom;
