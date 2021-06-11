@@ -80,4 +80,12 @@ public class Chambre {
     public void setEtage(int etage) {
         this.etage = etage;
     }
+
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
 }

@@ -73,4 +73,20 @@ public class Hotel {
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
+
+    public Directeur getDirecteur() {
+        return directeur;
+    }
+
+    public void setDirecteur(Directeur directeur) {
+        this.directeur = directeur;
+    }
+
+    public Set<Chambre> getChambres() {
+        return chambres;
+    }
+
+    public void setChambres(Set<Chambre> chambres) {
+        this.chambres = chambres;
+    }
 }

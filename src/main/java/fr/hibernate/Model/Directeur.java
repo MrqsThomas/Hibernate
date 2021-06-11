@@ -62,4 +62,20 @@ public class Directeur {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
+
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+
+    public Set<Salarie> getSalaries() {
+        return salaries;
+    }
+
+    public void setSalaries(Set<Salarie> salaries) {
+        this.salaries = salaries;
+    }
 }

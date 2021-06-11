@@ -80,4 +80,12 @@ public class Salarie {
     public void setExperience(Double experience) {
         this.experience = experience;
     }
+
+    public Directeur getDirecteur() {
+        return directeur;
+    }
+
+    public void setDirecteur(Directeur directeur) {
+        this.directeur = directeur;
+    }
 }
